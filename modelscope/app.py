@@ -181,7 +181,7 @@ if __name__ == "__main__":
                         value="corom-tiny")
 
                 file = gr.File(label='请上传知识库文件',
-                               file_types=['.txt', '.md', '.docx'])
+                               file_types=['.txt', '.md', '.docx', '.pdf'])
                 use_web = gr.Radio(["True", "False"],
                                    label="Web Search",
                                    value="False")

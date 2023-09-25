@@ -29,8 +29,7 @@ class ModelScopeEmbeddings(BaseModel, Embeddings):
             from modelscope.models import Model
             from modelscope.pipelines import pipeline
             from modelscope.utils.constant import Tasks
-            self.embed = pipeline(Tasks.sentence_embedding,
-                       model=self.model_id)
+            self.embed = pipeline(Tasks.sentence_embedding, model=self.model_id)
 
         except ImportError as e:
             raise ValueError(

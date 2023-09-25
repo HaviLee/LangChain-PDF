@@ -252,18 +252,18 @@ if __name__ == "__main__":
 
                     embedding_model = gr.Dropdown(list(
                         embedding_model_dict.keys()),
-                                                  label="Embedding model",
-                                                  value=init_embedding_model)
+                                                label="Embedding model",
+                                                value=init_embedding_model)
                     load_model_button = gr.Button("重新加载模型")
                 model_argument = gr.Accordion("模型参数配置")
                 with model_argument:
 
                     top_k = gr.Slider(1,
-                                      10,
-                                      value=6,
-                                      step=1,
-                                      label="vector search top k",
-                                      interactive=True)
+                                    10,
+                                    value=6,
+                                    step=1,
+                                    label="vector search top k",
+                                    interactive=True)
 
                     history_len = gr.Slider(0,
                                             5,
@@ -279,14 +279,14 @@ if __name__ == "__main__":
                                             label="temperature",
                                             interactive=True)
                     top_p = gr.Slider(0,
-                                      1,
-                                      value=0.9,
-                                      step=0.1,
-                                      label="top_p",
-                                      interactive=True)
+                                    1,
+                                    value=0.9,
+                                    step=0.1,
+                                    label="top_p",
+                                    interactive=True)
 
                 file = gr.File(label='请上传知识库文件',
-                               file_types=['.txt', '.md', '.docx', '.pdf'])
+                            file_types=['.txt', '.md', '.docx', '.pdf'])
 
                 init_vs = gr.Button("知识库文件向量化")
 
